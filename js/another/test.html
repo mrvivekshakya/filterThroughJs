@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test 1</title>
+    <script>
+        function insert(){
+            var table = document.getElementById("tableId");
+            var tbl = document.createElement("tr");
+            tbl.innerHTML = "<td>Vivek Shakya</td><td>9027149894</td>";
+            table.appendChild(tbl);
+        }
+    </script>
+</head>
+<body>
+    <table id="tableId" border="1" id="table">
+        <th>Name</th>
+        <th>Number</th>
+    </table>
+    <input type="submit" value="insert now" onclick="insert()">
+</body>
+</html>
+
+<!-- ar node = document.createElement("LI");
+  var textnode = document.createTextNode("Water");
+  node.appendChild(textnode);
+  document.getElementById("myList").appendChild(node); -->

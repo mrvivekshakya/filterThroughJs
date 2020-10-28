@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript callback</h2>
+
+<p id="demo"></p>
+
+<script>
+getFile("digitalclock1.html", myDisplayer, "demo"); 
+
+function myDisplayer(id, some) {
+  document.getElementById(id).innerHTML = some;
+}
+
+function getFile(file, callback, id) {
+  let xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      callback(id, this.responseText);
+    }
+  }
+  xhttp.open("GET", file, true);
+  xhttp.send();
+}
+</script>
+
+</body>
+</html>

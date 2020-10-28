@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testing File</title>
+    <script>
+        var width = 200;
+        var i = 1;
+        function grow(){
+            width = width + i;
+            let div = document.getElementById('myDiv').style;
+            div.width = width+"px";
+        }
+    </script>
+    <style>
+        .container{
+            width: 100%;
+        }
+        #myDiv{
+            background-color: gray;
+            border: 3px inset cornflowerblue;
+            width: 200px;
+            height: 400px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="myDiv"></div>
+    </div>
+    <script>
+        setInterval(grow,100);
+    </script>
+</body>
+</html>

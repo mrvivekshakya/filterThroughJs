@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital clock by Callback</title>
+    <script>
+        function clock(){
+            let d = new Date();
+            let hours = d.getHours();
+            let minutes = d.getMinutes();
+            let seconds = d.getSeconds();
+             if(hours<10){
+                 hours = "0" + hours;
+             }
+             if(minutes<10){
+                 minutes = "0" + minutes;
+             }
+             if(seconds<10){
+                 seconds = "0" + seconds;
+             }
+        document.getElementById('myDiv').innerHTML = hours  + " : "+minutes+" : "+ seconds;
+        }
+    </script>
+    <style>
+        .para{
+            width: 100%;
+        }
+        #myDiv{
+            font-size: 230px;
+            padding-top: 170px;
+            font-weight: 1000;
+            color: gray;
+            margin: auto;
+            width: 80%;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <p class="para">
+        <div id="myDiv"></div>
+    </p>
+    <script>
+        setInterval(clock,1000);
+    </script>
+</body>
+</html>

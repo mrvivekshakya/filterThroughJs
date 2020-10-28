@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insert Row by Js</title>
+</head>
+<body>
+    <table border="1" id="myTable">
+        <tr>
+            <td>Name</td>
+            <td>id</td>
+        </tr>
+    </table>
+    <input type="submit" value="Insert Now" onclick="addRow()">
+    <script>
+        
+        function addRow(){
+            let tbl = document.getElementById('myTable');
+            let row = tbl.insertRow(0);
+            let c1 = row.insertCell(0);
+            let c2 = row.insertCell(1);
+
+            c1.innerHTML = "Vivek Shakya";
+            c2.innerHTML = "798989";
+
+        
+        }
+
+
+    </script>
+</body>
+</html>

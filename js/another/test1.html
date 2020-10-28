@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test2</title>
+</head>
+<body>
+    <table border='1' id="table">
+        <tr>
+            <td>Name</td>
+            <td>number</td>
+        </tr>
+    </table>
+
+    <input type="submit" value="Insert" onclick="access()">
+
+    <script>
+        function access(){
+            var prev = document.getElementById('table').innerHTML;
+            //alert(prev);
+            prev += "<tr><td>Vivek shakya</td><td>9027149894</td></tr>";
+            var prev = document.getElementById('table').innerHTML= prev;
+        }
+    </script>
+</body>
+</html>

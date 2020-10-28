@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning callback</title>
+    <script>
+         function showIt(msg){
+             document.getElementById('msg').innerHTML = msg;
+         }
+         function add(a,b,myFunction){
+             let c = a+b;
+             myFunction(c);
+
+         }
+    </script>
+</head>
+<body>
+    <div id="msg"></div>
+    <script>
+        add(10,5,showIt);   
+    </script>
+</body>
+</html>

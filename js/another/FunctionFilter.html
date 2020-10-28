@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filter Method in Js</title>
+</head>
+<body>
+    <div class="container">
+        <div id="myDiv"></div>
+    </div>
+    <input type="submit" value="Filter" id="btn">
+    
+
+
+    <script>
+        var ar = [{"name":"vivek Shakya1","age":3},{"name":"vivek Shakya2","age":10},{"name":"vivek Shakya3","age":3},{"name":"vivek Shakya4","age":4},{"name":"vivek Shakya5","age":2},{"name":"vivek Shakya6","age":7},{"name":"vivek Shakya7","age":2}];
+        function fil(){
+            let ages = ar.filter(function(a){
+                return a.age < 6;
+            });
+            for(var i = 0; i<=ages.length; i++ ){
+                console.log(ages[i].age + ages[i].name);
+            }
+        }
+
+        
+
+
+
+
+        document.getElementById('btn').addEventListener('click',fil);
+    </script>
+</body>
+</html>

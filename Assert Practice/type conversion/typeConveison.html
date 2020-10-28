@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Type Conversion</title>
+</head>
+<body>
+    <div class="container">
+        <div id="myDiv"></div>
+        <div id="myDiv1"></div>
+    </div>
+
+
+    <script>
+        let str = prompt("Enter a strin: ");
+
+        document.getElementById('myDiv').innerHTML=(typeof str);
+
+        document.getElementById('myDiv1').innerHTML = Number(str);
+    </script>
+</body>
+</html>

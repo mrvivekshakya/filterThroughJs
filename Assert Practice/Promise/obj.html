@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object in Javascript</title>
+    <script>
+        function getValue(){
+            var myObj = {};
+            const first = prompt("Enter your name here");
+            const second = prompt("Enter your email here");
+            const third = prompt("Enter your phone here");
+
+            myObj.name = first;
+            myObj.email = second;
+            myObj.phone = third;
+
+            console.log(myObj.email)          
+
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="myDiv"></div>
+    </div>
+    <script>
+        getValue();
+    </script>
+</body>
+</html>

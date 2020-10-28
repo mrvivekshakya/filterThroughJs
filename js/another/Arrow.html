@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Function in Js</title>
+</head>
+<body>
+    <div class="container">
+        <div id="myDiv"></div>
+    </div>
+
+
+    <script>
+        const add = (a,b) => {
+            let c = a + b;
+            document.getElementById('myDiv').innerHTML = c;
+        };
+
+        add(9,6);
+
+        //document.getElementById('myDiv').innerHTML = res;
+    </script>
+</body>
+</html>

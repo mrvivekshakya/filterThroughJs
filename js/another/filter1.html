@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XML Request </title>
+</head>
+<body>
+    <div class="container">
+        <div id="myDiv"></div>
+    </div>
+
+    <input type="submit" value="Click Now" id="btn" >
+
+
+<script>
+
+function readFile(cb) {
+    var oXHR = new XMLHttpRequest();
+    oXHR.onreadystatechange = reportStatus;
+    oXHR.open("GET", "../test_data.json", true); // get json file.
+    oXHR.send();
+    function reportStatus() {
+        if (oXHR.readyState == 4) {
+            return cb(this.responseText);
+        } else {
+            return cb(null);
+        }
+    }
+
+}
+function cb(res){
+    //document.getElementById('myDiv').innerHTML = res;
+    var ar = JSON.parse(res);
+    document.getElementById('myDiv').innerHTML = ar[0].salary;
+}
+//readFile(cb);
+const button = document.getElementById('btn');
+button.addEventListener('click',readFile(cb));
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arbitory Argument in javaScript</title>
+</head>
+<body>
+    <div class="container">
+        <div id="myDiv"></div>
+    </div>
+
+
+    <script>
+        const add = (...ar){
+            let c = ar[1]+ar[2];
+            document.getElementById('myDiv').innerHTML = c;
+        };
+
+        const myAr = [1,5,6,3,2];
+        add(myAr);
+
+    </script>
+</body>
+</html>
